@@ -5,12 +5,15 @@
  */
 
 import AWS from 'aws-sdk'
+import dotenv from 'dotenv'
 import fs from 'fs'
 import readline from 'readline'
-import { homedir } from 'os'
 import ini from 'ini'
+import { homedir } from 'os'
 import { exit } from 'process'
-import { DEFAULT_REGION, DEFAULT_SERIAL_NUMBER, DEFAULT_DURATION, DEFAULT_PROFILE } from './config.js'
+
+dotenv.config()
+const { DEFAULT_REGION, DEFAULT_SERIAL_NUMBER, DEFAULT_DURATION, DEFAULT_PROFILE } = process.env
 
 const getMFAToken = () => {
   const ui = readline.createInterface({
