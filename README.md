@@ -6,4 +6,10 @@ Tired of fetching mfa token and updating credentials for mfa profile everyday wi
 2. Install required packages `npm install`
 3. Update config file to match your aws credentials
 4. Run `node index.js`, the script will use credentials of the profile in the config file, fetch mfa temporary credentials after you enter the code, and create/update another profile with postfix **-mfa** in the aws credentials file
-5. Switch to use mfa profile and continue your work `export AWS_PROFILE=profile-mfa`
+5. Switch to use mfa profile and continue your work `export AWS_PROFILE=${DEFAULT_PROFILE}-mfa`
+
+## Further tweak for Mac user
+
+- add alias to your .zshrc file to create a quick command:
+  `alias mfa="node ~/[path-to-the-repo]/mfa-switch/index.js"`
+- On your next terminal session onwards, you just need to run `mfa` and then `export AWS_PROFILE=${DEFAULT_PROFILE}-mfa` to use the mfa profile
