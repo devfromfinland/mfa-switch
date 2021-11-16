@@ -1,0 +1,16 @@
+{
+  "name": "mfa-switch",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "quickly switch to mfa profile",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Viet Phan",
+  "license": "ISC",
+  "dependencies": {
+    "aws-sdk": "^2.1029.0",
+    "ini": "^2.0.0"
+  }
+}
